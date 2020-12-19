@@ -1,0 +1,119 @@
+{
+  "name": "bud-example",
+  "version": "0.0.1",
+  "description": "example bud wordpress theme",
+  "private": true,
+  "keywords": [
+    "bud-example"
+  ],
+  "homepage": "https://github.com/nuevesolutions/bud-example",
+  "bugs": {
+    "url": "https://github.com/nuevesolutions/bud-example/issues",
+    "email": "hello@nuevesolutions.com"
+  },
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Nueve Solutions LLC",
+    "email": "hello@nuevesolutions.com",
+    "url": "https://nuevesolutions.com"
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nuevesolutions/bud-example"
+  },
+  "scripts": {
+    "build": "make -s build",
+    "clean": "make -s clean",
+    "coverage": "make -s coverage",
+    "format": "make -s format",
+    "inc": "make -s inc",
+    "lint": "make -s lint",
+    "make": "make",
+    "prepare": "make -s prepare",
+    "purge": "make -s purge",
+    "report": "make -s report",
+    "spellcheck": "make -s spellcheck",
+    "start": "make -s start",
+    "test": "make -s test",
+    "test:ui": "make test-ui",
+    "test:watch": "make -s test-watch"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.12.5",
+    "core-js": "^3.8.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-decorators": "^7.12.1",
+    "@babel/plugin-proposal-optional-chaining": "^7.12.7",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-typescript": "^7.12.7",
+    "@roots/bud": "^2.1.1",
+    "@roots/bud-babel": "^2.1.1",
+    "@roots/bud-entrypoints": "^2.1.1",
+    "@roots/bud-extensions": "^2.1.1",
+    "@roots/bud-imagemin": "^2.1.1",
+    "@roots/bud-postcss": "^2.1.1",
+    "@roots/bud-react": "^2.1.1",
+    "@roots/bud-wordpress-externals": "^2.1.1",
+    "@roots/bud-wordpress-manifests": "^2.1.1",
+    "@types/jest": "^26.0.19",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-inline-import": "^3.0.0",
+    "babel-plugin-macros": "^3.0.1",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "cloc": "^2.7.0",
+    "cspell": "^5.0.8",
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb-typescript": "^12.0.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.6.3",
+    "jest-sonar-reporter": "^2.0.0",
+    "lockfile-lint": "^4.3.7",
+    "majestic": "^1.8.0",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.3"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "eslintIgnore": [
+    "dist",
+    "es",
+    "lib"
+  ],
+  "jest": {
+    "testRegex": "((/(tests|__tests__)((/|/[^_.\n][^/\n]*(/[^_.\n][^/\n]+)*/)[^_.\n][^/\n]*))|((/|/.*/)(([^_.\n][^/\n]*.(spec|test))|(spec|test)))).[jt]sx?$",
+    "testEnvironment": "node",
+    "verbose": true,
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/",
+      "<rootDir>/es/",
+      "<rootDir>/lib/"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/tests/_setup.ts"
+    ]
+  },
+  "jestSonar": {
+    "reportPath": "node_modules/.tmp/reports",
+    "reportFile": "test-report.xml",
+    "indent": 4
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "none"
+  }
+}
